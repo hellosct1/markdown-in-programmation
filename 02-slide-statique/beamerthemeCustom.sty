@@ -1,0 +1,72 @@
+% the 3 colors 66A3D2
+\definecolor{Color1}{HTML}{452632}
+\definecolor{Color2}{HTML}{91204D}
+\definecolor{Color3}{HTML}{E4844A}
+
+% the logo on every page
+\logo{\includegraphics[height=0.4cm]{./images/logo_programmez.png}}
+
+\usepackage{booktabs,latexsym,amssymb,wasysym}
+
+% Pour enlever le titre "Figure X" sous les images
+\usepackage[labelformat=empty]{caption}
+
+\hypersetup{colorlinks,linkcolor=,urlcolor=Color3}
+
+\useoutertheme{split}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+\useinnertheme[shadow]{rounded}
+
+% ----------- Template -----------------------
+% Construction template beamer
+% En haut de la page
+\setbeamertemplate{headline}{}
+
+% Pour supprimer la partie titre  "section 1"
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
+
+% Pied de page
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+    \usebeamerfont{date in head/foot}
+    \hfill\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}
+}
+
+% ----------- Couleurs -----------------------
+% gestion des colors
+\setbeamercolor{frametitle}{bg=white,fg=Color2}
+\setbeamercolor{palette primary}{bg=Color3,fg=white}
+\setbeamercolor{palette secondary}{bg=Color2}
+\setbeamercolor{palette tertiary}{bg=Color3}
+\setbeamercolor{palette quaternary}{bg=Color1}
+
+\setbeamercolor{normal text}{fg=Color1}
+\setbeamercolor{block title}{bg=Color2}
+\setbeamercolor{example text}{fg=Color3}
+\setbeamercolor{alerted text}{fg=Color1}
+
+\setbeamercolor{item}{parent=normal text}
+\setbeamercolor{section in toc}{fg=Color3}
+
+% ------------ Commande --------------------
+\newcommand{\code}[1]{\textcolor{Color3}{\footnotesize{\texttt{#1}}}}
+\newcommand{\entity}[1]{\textcolor{Color2}{#1}}
+\newcommand{\good}{\textcolor{green}{\smiley}}
+\newcommand{\bad}{\textcolor{red}{\frownie}}
+
+
+
